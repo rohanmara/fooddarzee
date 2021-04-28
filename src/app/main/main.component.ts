@@ -11,6 +11,7 @@ export class MainComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) { }
 
   selectedSlide = 0; 
+  selectedSlide2 = 0; 
   imgArr = [
     {img: "../../assets/mediImg1.webp", text: "Personalised Nutrition" },
     {img: "../../assets/mediImg2.webp", text: "Tasty Meals"},
@@ -84,6 +85,14 @@ export class MainComponent implements OnInit {
 
   prev(){
     this.selectedSlide = this.selectedSlide === 0 ? 2 : this.selectedSlide - 1 ; 
+  }
+
+  next2(){
+    this.selectedSlide2 = this.selectedSlide2 === this.slideArr2.length - 1 ? 0 : this.selectedSlide2 + 1 ; 
+  }
+
+  prev2(){
+    this.selectedSlide2 = this.selectedSlide2 === 0 ? 3 : this.selectedSlide2 - 1 ; 
   }
 
 }
